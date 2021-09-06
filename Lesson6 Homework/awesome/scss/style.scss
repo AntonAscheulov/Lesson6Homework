@@ -1,0 +1,240 @@
+//ШРИФТЫ
+@font-face {
+    font-family: Raleway;
+    src: url(/fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+//ШРИФТЫ
+
+// обнуление
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+// обнуление
+
+// ШАБЛОНЫ
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn{
+    width: 135px;
+    height: 42px;
+    padding: 11px 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    color: #FFFFFF;
+    font-size: 15px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 1px solid #FFFFFF;
+    cursor:pointer;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.header-txt{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 131px;
+}
+
+.text-h2{
+    text-transform: uppercase;
+    font-family: Raleway, Verdana, sans-serif;
+    color: #212121;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.underline{
+    width: 64px;
+    background-color: #E72424;  
+    border: 1px solid #E72424;
+}
+
+.text-p{
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    color: #86878B;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.three-column-style{
+    width: 100%;
+    max-width: 1200px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+// ШАБЛОНЫ
+
+
+// СЕКЦИЯ AWESOME
+
+.awesome{
+    @extend .container;
+    padding-bottom: 116px;
+}
+
+.awesome-text{
+    @extend .header-txt;
+    margin-bottom: 68px;
+    h2{
+        @extend .text-h2;
+    }
+    p{
+        @extend .text-p;
+    }
+    .awesome-line{
+        @extend .underline;
+    }
+}
+
+
+.why-awesome{
+    @extend .three-column-style;
+}
+
+@media(max-width:767px){
+    .why-awesome{
+        @extend .three-column-style;
+        flex-direction: column;
+        align-items: center;
+    } 
+    .why-awesome-block{
+        padding: 10px;
+    }
+    .awesome{
+        padding-bottom: 40px;
+    }
+}
+
+.why-awesome-block{
+    width: 350px;
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    h2{
+        font-family: 'Open Sans', Tahoma, sans-serif;
+        color: #333333;
+        font-size: 20px;
+        margin-bottom: 16px;
+        font-weight: 700;
+    }
+}
+
+.why-awesome-block-cirleimg{
+    border-radius: 50%;
+    border: 1px solid #E72424; 
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lamp{
+    background-image: url(/assets/icons/lamp.svg);
+}
+
+.keyboard{
+    background-image: url(/assets/icons/keyboard.svg);
+}
+
+.light{
+    background-image: url(/assets/icons/light.svg);  
+}
+
+
+// СЕКЦИЯ STYLISH
+
+.stylish{
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(/assets/img/backgroundStylish.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 58px;
+    padding-bottom: 38px;
+    .stylish-content{
+        @extend .container;
+    }
+}
+
+.stylish-text{
+    @extend .header-txt;
+    height: 142px;
+    margin-bottom: 30px;
+    h2{
+        @extend .text-h2;
+        color: #FFFFFF;
+    }
+    p{
+        font-family: Raleway, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: 300px;
+        color:#FFFFFF80;
+    }
+    .stylish-line{
+        @extend .underline;
+        background-color: #FFFFFF;  
+        border: 1px solid #FFFFFF;
+    }
+}
+
+
+.stylish-btn{
+    a{
+        @extend .btn;
+        &:hover{
+            background-color: rgba(192, 190, 190, 0.486);
+        }
+    }
+} 
+
+
+// FOOTER
+footer{
+    background: #000000;
+    margin: 0 auto;
+    p{font-family: 'Open Sans', Tahoma, sans-serif;
+        color: #FFFFFF80;
+        font-size: 12px;
+        font-weight: 400;
+        padding:15px 0;
+    }
+    .icons-footer{
+        width: 100%;
+        max-width: 317px;
+        display: inline-flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        a{font-size: 24px;
+        color: #FFFFFFCC;
+        text-decoration: none;
+        &:hover{
+        color: rgba(192, 190, 190, 0.486);
+        }
+        }    
+        }
+    }
